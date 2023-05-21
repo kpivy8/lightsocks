@@ -21,8 +21,8 @@ do
     fi    
 
     # env GOOS=$GOOS GOARCH=$GOARCH go build -o $output_name
-    env GOOS=$GOOS GOARCH=$GOARCH go build -o $output_name $package
-    tar zcvf $output_name'.tar.gz' './'$output_name
+    env GOOS=$GOOS GOARCH=$GOARCH go build -o './dist/'$output_name $package
+    tar zcvf ./dist/$output_name'.tar.gz' './dist/'$output_name
     if [ $? -ne 0 ]; then
            echo 'An error has occurred! Aborting the script execution...'
         exit 1

@@ -1,5 +1,17 @@
 [![GoDoc](http://img.shields.io/badge/godoc-reference-5272B4.svg?style=flat-square)](https://godoc.org/github.com/gwuhaolin/lightsocks)
 
+# 自用修改
+## 修改的内容
+修改配置文件名为'config.json',路径在和主文件同目录中。
+修改server启动时候的环境变量”LIGHTSOCKS_SERVER_PORT"为"PORT",启动指定端口用
+```
+./buildgo.sh ./cmd/lightsocks-server/
+./buildgo.sh ./cmd/lightsocks-local/
+
+```
+编译完的文件在dist目录中
+
+
 # [Lightsocks](https://github.com/gwuhaolin/lightsocks)
 一个轻量级网络混淆代理，基于 SOCKS5 协议，可用来代替 Shadowsocks。
 
