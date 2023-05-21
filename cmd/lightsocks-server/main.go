@@ -19,7 +19,7 @@ func main() {
 	log.SetFlags(log.Lshortfile)
 
 	// 优先从环境变量中获取监听端口
-	port, err := strconv.Atoi(os.Getenv("LIGHTSOCKS_SERVER_PORT"))
+	port, err := strconv.Atoi(os.Getenv("PORT"))
 	// 服务端监听端口随机生成
 	if err != nil {
 		port, err = freeport.GetFreePort()
